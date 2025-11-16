@@ -5,6 +5,11 @@
 `python bot.py`
 
 ## Environment variables
+
 API_KEY
 TELEGRAM_TOKEN
 WEBHOOK_URL
+
+## Deployed on render
+
+https://dream-analyzer-ku6t.onrender.com/setwebhook
