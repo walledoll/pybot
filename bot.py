@@ -11,7 +11,8 @@ from telebot import types
 
 # ========== Настройки ==========
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
-WEBHOOK_URL = os.getenv("WEBHOOK_URL")  # например: https://your-bot.onrender.com
+WEBHOOK_URL = os.getenv("WEBHOOK_URL")
+API_KEY = os.getenv("API_KEY")  # например: https://your-bot.onrender.com
 
 if not TELEGRAM_TOKEN or not WEBHOOK_URL:
     print("Ошибка: не заданы TELEGRAM_TOKEN или WEBHOOK_URL", file=sys.stderr)
@@ -28,7 +29,7 @@ payment_sessions = {}
 
 class OpenAIAnalyzer:
     def __init__(self):
-        self.api_key = "sk-kQdRlPAG1zDhaYRxHOrydjdc9BYoarFr"
+        self.api_key = API_KEY
         self.base_url = "https://openai.api.proxyapi.ru/v1"
         self.model = "gpt-3.5-turbo"
 
